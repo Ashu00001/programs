@@ -3,7 +3,7 @@ using namespace std;
 int a[100];
 void prime(int a[],int j)
 {
-	int i=2;
+bool isFirst = true;
 	for(int i=0;i<j;i++)
 		{
 		int k=1;
@@ -18,8 +18,17 @@ void prime(int a[],int j)
 		}
 		if(count<=1)
 		{
-			cout<<a[i]<<"\t";
+			if (isFirst)
+        {
+            isFirst = false;
+        }
+        else
+        {
+            cout << ',';
+        }
+        cout<<a[i];
 		}
+		
 }
 }
 void factor(int x)
